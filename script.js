@@ -1,15 +1,16 @@
 // бабуля
-let total = 0;
-const annualGift = 1000;
-const rate = 0.06;
-const years = 16;
+let initialAge = 5;
+let finalAge = 20;
+let yearlyGift = 1000;
+let interestRate = 0.06;
+let totalMoney = 0;
 
-for (let i = 0; i < years; i++) {
-  const remainingYears = years - i;
-  total += annualGift * Math.pow(1 + rate, remainingYears);
+for (let age = initialAge; age < finalAge; age++) {
+  totalMoney += yearlyGift;
+  totalMoney *= 1 + interestRate;
 }
 
-console.log(total.toFixed(4));
+console.log(`Сумма на счету к 20 годам: ${totalMoney.toFixed(2)} ₽.`);
 
 // вклад
 let X = parseFloat(prompt("Введите сумму вклада:"));
